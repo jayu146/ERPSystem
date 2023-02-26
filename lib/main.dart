@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:erpapp/pages/home_page.dart';
 import 'package:erpapp/pages/routes.dart';
-
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       routes: {
-        "/":(context)=> HomePage(),
-        MyRoutes.homeRoute: (context)=> HomePage(),
+        "/":(context)=> const HomePage(),
+        MyRoutes.homeRoute: (context)=> const HomePage(),
       },
       initialRoute: MyRoutes.homeRoute,
     );
