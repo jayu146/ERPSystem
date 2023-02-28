@@ -25,6 +25,10 @@ class _HomePageState extends State<HomePage> {
             highlightColor: Colors.white,
             iconSize: 28,
           ),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.account_circle),
+            highlightColor: Colors.white,
+            iconSize: 28,
+          ),
         ],
       ),
     );
