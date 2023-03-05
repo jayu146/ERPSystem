@@ -1,4 +1,5 @@
 import 'package:erpapp/pages/home_page.dart';
+import 'package:erpapp/pages/profile.dart';
 import 'package:erpapp/pages/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -15,11 +16,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/":(context)=> const HomePage(),
         MyRoutes.homeRoute: (context)=> const HomePage(),
+        MyRoutes.profileRoute: (context)=> MyProfile(),
       },
-      initialRoute: MyRoutes.homeRoute,
     );
   }
 }
