@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
           },
             icon: const Icon(Icons.account_circle),
           ),
-        ),backgroundColor: MyColors.background,
+        ),backgroundColor: MyColors.white,
       body: Container(
         child:  Padding(
           padding: const EdgeInsets.all(10.0),
@@ -69,9 +69,11 @@ class _HomePageState extends State<HomePage> {
               borderRadius: BorderRadius.circular(15),color: Colors.transparent,border: Border.all(width: 0),),
               child: Column(
                 mainAxisAlignment:MainAxisAlignment.center,
-                children: [IconButton(onPressed: (){},
+                children: [IconButton(onPressed: (){
+                  Navigator.pushNamed(context, MyRoutes.taskRoute);
+                },
                   icon: Image.asset("assets/images/1.png"),iconSize: 100,),
-                  Text("Contact",style: TextStyle(color: Colors.black,fontSize: 30))
+                  Text("MyProject",style: TextStyle(color: Colors.black,fontSize: 30))
                 ],
               ),
             ),
@@ -97,6 +99,11 @@ class _HomePageState extends State<HomePage> {
             ),
           ],),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        // tooltip: Add,
+        child: Icon(Icons.add),
       ),
     );
 

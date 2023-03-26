@@ -1,10 +1,12 @@
 import 'package:erpapp/pages/home_page.dart';
+import 'package:erpapp/pages/mytask.dart';
 import 'package:erpapp/pages/profile.dart';
 import 'package:erpapp/pages/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
         "/":(context)=> const HomePage(),
         MyRoutes.homeRoute: (context)=> const HomePage(),
         MyRoutes.profileRoute: (context)=> MyProfile(),
+        MyRoutes.taskRoute : (context) => MyTask(),
+
       },
     );
   }
